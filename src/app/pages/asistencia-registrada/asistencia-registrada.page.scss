@@ -1,0 +1,35 @@
+* {
+  user-select: none;
+}
+.container {
+  height: 90%;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.success-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.success-container .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+.success-container .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #92949C;
+}
+.btn-primary {
+  width: 100%;
+  --background: linear-gradient(180deg, #F48742 0%, #F56087 100%);
+}

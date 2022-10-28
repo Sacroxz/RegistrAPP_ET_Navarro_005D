@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "home-outline",
+    "name": "Inicio",
+    "redirectTo": "/inicio"
+  },
+  {
+    "icon": "calendar-outline",
+    "name": "Feriados",
+    "redirectTo": "/feriados"
+  },
+  {
+    "icon": "person-outline",
+    "name": "Perfil",
+    "redirectTo": "/perfil"
+  }
+]

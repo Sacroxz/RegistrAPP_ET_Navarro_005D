@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="container">
+    <div class="wrapper">
+      <div style="display: flex; cursor: pointer">
+        <ion-img routerLink="/home" routerDirection="back" src="/assets/svg/chevron-left.svg"></ion-img>
+      </div>
+      <div class="top">
+        <p class="lead">Iniciar Sesion</p>
+      </div>
+      <form [formGroup] = "formularioLogin">
+        <!-- Input Correo -->
+        <p class="label">Correo</p>
+        <ion-input 
+          type="email" 
+          formControlName="correo" 
+          placeholder="Ingrese el correo"
+          class="custom">
+        </ion-input>
+        <!-- <div *ngIf="formularioLogin.get('correo').invalid && 
+        formularioLogin.get('correo').errors && 
+        (formularioLogin.get('correo').dirty || formularioLogin.get('correo').touched)">
+          <p class="text-danger"
+          *ngIf="formularioLogin.get('correo').hasError('required')">
+            Este campo es requerido.
+          </p>
+          <p class="text-danger"
+          *ngIf="formularioLogin.get('correo').hasError('pattern')">
+            Correo no valido.
+          </p>
+        </div> -->
+        <!-- Input Contrasena -->
+        <p class="label">Contrasena</p>
+        <app-show-hide-password>
+          <ion-input 
+          type="password" 
+          formControlName="password" 
+          placeholder="Ingrese la contrasena"
+          class="custom pass">
+        </ion-input>
+        </app-show-hide-password>
+        
+        <!-- <div *ngIf="formularioLogin.get('password').invalid && 
+        formularioLogin.get('password').errors && 
+        (formularioLogin.get('password').dirty || formularioLogin.get('password').touched)">
+          <p class="text-danger"
+          *ngIf="formularioLogin.get('password').hasError('required')">
+            Este campo es requerido.
+          </p>
+          <p class="text-danger"
+          *ngIf="formularioLogin.get('password').hasError('minlength')">
+            La contrasena debe tener al menos 6 caracteres.
+          </p>
+        </div> -->
+        <!-- <div>
+          <p class="forgot">Olvidaste tu contrasena? <br> <span class="recovery" routerLink="/recuperar-contrasena"> Recuperala aqui!</span></p>
+        </div> -->
+        <ion-button (click)="presentLoading()" class="m-top" color="secondary" expand="block" fill="solid" shape="round">
+          Iniciar Sesion
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

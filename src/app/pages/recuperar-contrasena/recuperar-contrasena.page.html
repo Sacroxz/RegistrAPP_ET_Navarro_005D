@@ -1,0 +1,24 @@
+<ion-content>
+  <div class="container">
+    <div class="wrapper">
+      <div style="display: flex; cursor: pointer">
+        <ion-img routerLink="/login" routerDirection="back" src="/assets/svg/chevron-left.svg"></ion-img>
+      </div>
+      <div class="top">
+        <p class="lead">Recuperar Contrasena</p>
+      </div>
+      <form>
+        <div class="input-container">
+          <p>Correo electronico</p>
+          <ion-input type="email"></ion-input>
+        </div>
+        <div>
+          <p class="forgot">Te enviaremos un correo con las intrucciones para restaurar tu contrasena</p>
+        </div>
+        <ion-button routerLink="/inicio" color="secondary" expand="block" fill="solid" shape="round">
+          Enviar Correo
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

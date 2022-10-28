@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="container">
+    <div style="display: flex; cursor: pointer">
+      <ion-img (click)="toggleMenu()" src="/assets/svg/menu.svg"></ion-img>
+    </div>
+    <div class="wrapper">
+      <p class="lead">Tus Cursos</p>
+      <div class="course-container">
+      <div class="class-card" routerLink="/descripcion-curso" *ngFor="let asignatura of asignaturas | async">
+        <div class="class-code">
+          <p>{{asignatura["codigo"]}}</p>
+        </div>
+        <p class="class-name">{{asignatura["nombre"]}}</p>
+        <p *ngIf="asignatura['inasistencias'] === 0" class="class-attendance">Asistencia: <span>100%</span></p>
+        <p *ngIf="asignatura['inasistencias'] !== 0" class="class-attendance">Asistencia: <span>{{ (asignatura["inasistencias"] / (asignatura["asistencias"] + asignatura["inasistencias"]) * 100).toFixed(0) }}%</span></p>
+      </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

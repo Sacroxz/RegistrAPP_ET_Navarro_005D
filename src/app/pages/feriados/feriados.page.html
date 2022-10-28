@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="container">
+    <div style="display: flex; cursor: pointer">
+      <ion-img (click)="toggleMenu()" src="/assets/svg/menu.svg"></ion-img>
+    </div>
+    <div class="wrapper">
+      <div class="top">
+        <p class="lead">📅 Feriados</p>
+      </div>
+      <div class="card_container">
+        <div class="info_card" *ngFor="let item of feriado">
+          <div>
+            <div class="flex">
+            <p class="today">{{ item['date'] | date: 'd MMM, y' }}</p>
+            <p class="temp"></p>
+            </div>
+            <p class="classes_left"> 
+              <span *ngIf="item['type'] === 'Religioso'">✝️</span> 
+              <span *ngIf="item['type'] === 'Civil'">📅</span>
+              {{ item['title'] }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>
+

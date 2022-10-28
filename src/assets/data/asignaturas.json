@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Arquitectura",
+    "codigo": "ASY4131",
+    "asistencias": 2,
+    "inasistencias": 1
+  },
+  {
+    "nombre": "Ingles Intermedio",
+    "codigo": "INI5111",
+    "asistencias": 9,
+    "inasistencias": 2
+  },
+  {
+    "nombre": "Estadistica Descriptiva",
+    "codigo": "MAT4140",
+    "asistencias": 4,
+    "inasistencias": 2
+  },
+  {
+    "nombre": "Calidad de Software",
+    "codigo": "CSY4111",
+    "asistencias": 3,
+    "inasistencias": 0
+  },
+  {
+    "nombre": "Proceso de Portafolio",
+    "codigo": "APY4461",
+    "asistencias": 4,
+    "inasistencias": 0
+  },
+  {
+    "nombre": "Etica para el Trabajo",
+    "codigo": "EAY4470",
+    "asistencias": 7,
+    "inasistencias": 0
+  },
+  {
+    "nombre": "Programacion de Aplicaciones Moviles",
+    "codigo": "PGY4121",
+    "asistencias": 5,
+    "inasistencias": 3
+  }
+]

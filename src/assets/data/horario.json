@@ -1,0 +1,39 @@
+[
+  {
+    "Dia": "Lunes",
+    "Asignaturas": [
+      ["Arquitectura", "16:00"],
+      ["Ingles Intermedio", "17:30"]
+    ]
+  },
+  {
+    "Dia": "Martes",
+    "Asignaturas": [
+      ["Estadistica Descriptiva", "11:30"],
+      ["Calidad de Software", "13:00"],
+      ["Proceso de Portafolio", "14:30"],
+      ["Etica para el Trabajo", "16:00"]
+    ]
+  },
+  {
+    "Dia": "Miercoles",
+    "Asignaturas": [
+      ["Arquitectura", "12:00"],
+      ["Ingles Intermedio", "14:30"]
+    ]
+  },
+  {
+    "Dia": "Jueves",
+    "Asignaturas": [
+      ["Estadistica Descriptiva", "13:30"],
+      ["Calidad de Software", "16:00"]
+    ]
+  },
+  {
+    "Dia": "Viernes",
+    "Asignaturas": [
+      ["Programacion de Aplicaciones Moviles", "12:00"],
+      ["Ingles Intermedio", "17:30"]
+    ]
+  }
+]

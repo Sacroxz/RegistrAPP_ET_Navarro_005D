@@ -1,0 +1,36 @@
+* {
+  user-select: none;
+}
+.container {
+  height: 90%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+.lead {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.scanner-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: blue;
+  background: #ECECEC;
+  border-radius: 16px;
+}
+.scanner-text {
+  text-align: center;
+  color: #92949C;
+  padding: 32px;
+  line-height: 26px;
+}

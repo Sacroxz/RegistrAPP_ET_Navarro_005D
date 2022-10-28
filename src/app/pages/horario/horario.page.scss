@@ -1,0 +1,155 @@
+ion-item::part(native) {
+  background-color: #fff;
+  border-radius: 8px;
+  color: #26282A;
+  box-shadow: 0px 3px 10px #E5E5E5;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0 solid black;
+}
+* {
+user-select: none;
+}
+p {
+margin: 0;
+}
+ion-row {
+margin-right: 24px;
+margin-left: 24px;
+}
+ion-button {
+font-weight: 600;
+font-size: 14px;
+}
+.wrapper {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+.top {
+display: flex;
+flex-grow: 1;
+justify-content: space-between;
+align-items: center;
+height: 48px;
+}
+.lead {
+font-size: 20px;
+line-height: 32px;
+font-weight: 700;
+}
+.profile {
+width: 48px;
+height: 48px;
+background: #E5E5E5;
+border-radius: 32px;
+border: 1px solid #fff;
+cursor: pointer;
+}
+.info_card {
+background: linear-gradient(180deg, #F48742 0%, #F56087 100%);
+padding: 24px;
+gap: 8px;
+border-radius: 16px;
+box-shadow: 0px 3px 10px #E5E5E5;
+}
+.today {
+color: #fff;
+font-weight: 500;
+font-size: 14px;
+line-height: 32px;
+}
+.classes_left {
+color: #fff;
+font-weight: 700;
+font-size: 18px;
+line-height: 32px;
+}
+.sublead {
+font-weight: 700;
+font-size: 18px;
+line-height: 32px;
+}
+.class_container {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+.class_card {
+background-color: #F4F4F7;
+padding: 16px 20px;
+border-radius: 16px;
+}
+.class_details {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.status_container {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 8px;
+}
+.status_container .status {
+font-weight: 600;
+font-size: 14px;
+line-height: 32px;
+color: #12D696;
+}
+.status_container .status_icon {
+height: 8px;
+width: 8px;
+background: #12D696;
+border-radius: 32px;
+}
+.class_details .time {
+font-weight: 400;
+font-size: 14px;
+line-height: 32px;
+color: #92949C;
+}
+.subject {
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #26282A;
+}
+.btn-primary {
+width: 100%;
+--background: linear-gradient(180deg, #F48742 0%, #F56087 100%);
+}
+.btn-secondary {
+width: 100%;
+--background: #fff;
+border: 1px solid #F48742;
+--color: #F48742;
+}
+.class_wrapper {
+height: 200px;
+}
+  .top {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+  }
+  .lead {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  ion-accordion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  ion-accordion {
+    box-shadow: 0px 3px 10px #E5E5E5;
+  }

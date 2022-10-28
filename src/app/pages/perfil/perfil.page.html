@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="container">
+    <div style="display: flex; cursor: pointer">
+      <ion-img (click)="toggleMenu()" src="/assets/svg/menu.svg"></ion-img>
+    </div>
+    <div class="wrapper">
+      <p class="lead">👤 Tu Perfil</p>
+      <div class="user_container">
+        <div class="user_card">
+          <p class="user_label">Nombre</p>
+          <p class="user_data">{{ nombre }}</p>
+        </div>
+        <div class="user_card">
+          <p class="user_label">Correo</p>
+          <p class="user_data">{{ correo }}</p>
+        </div>
+        <div class="user_card">
+          <p class="user_label">Tipo de Cuenta</p>
+          <p class="user_data">{{ tipo }}</p>
+        </div>
+      </div>
+      <div class="option_container">
+        <div class="option_card" (click)="logout()" routerLink="/home">
+          <div class="option_icon_layer" routerLink="/home">
+            <div class="option_text logout">Cerrar Sesion</div>
+          </div>
+          <ion-img src="/assets/svg/chevron-right.svg"></ion-img>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

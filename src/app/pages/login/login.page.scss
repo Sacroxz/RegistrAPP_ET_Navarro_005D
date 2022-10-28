@@ -1,0 +1,74 @@
+ion-content {
+  &::part(background) {
+    background: linear-gradient(180deg, #F48742 0%, #F56087 100%)
+  }
+}
+ion-item {
+  --background: transparent;
+}
+* {
+  user-select: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ion-input.custom {
+  --background: white;
+  --placeholder-color: #ddd;
+  --placeholder-opacity: .8;
+
+  --padding-bottom: 12px;
+  --padding-end: 10px;
+  --padding-start: 10px;
+  --padding-top: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 8px;
+  
+  outline: 2px solid #CACACA;
+}
+ion-input.custom.pass {
+  border-radius: 8px 0px 0px 8px;
+}
+.has-focus {
+  outline: 2px solid #5b9bd1 !important;
+}
+.label {
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+}
+.text-danger {
+  color: white;
+  font-weight: 700;
+}
+.lead {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 42px;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+// .input-container p, .recovery, .forgot {
+//   font-weight: 600;
+//   line-height: 32px;
+//   color: #fff;
+// }
+.recovery {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.m-top {
+  margin-top: 24px;
+}

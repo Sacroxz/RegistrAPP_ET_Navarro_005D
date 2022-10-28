@@ -1,0 +1,23 @@
+<ion-menu side="start" menuId="primerMenu" contentId="main" swipeGesture="false">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>RegistrAPP</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let c of componentes | async">
+          <ion-item [routerLink]="c.redirectTo" routerLinkActive="active-link">
+            <ion-icon [name]="c.icon" slot="start" routerLinkActive="active-link"></ion-icon>
+            <ion-label routerLinkActive="active-link">{{c.name}}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="logout()" routerLink="/home">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label routerLinkActive="active-link">Cerrar Sesion</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+  </ion-content>
+</ion-menu>

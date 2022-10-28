@@ -1,0 +1,45 @@
+ion-content {
+  --ion-background-color: linear-gradient(180deg, #F48742 0%, #F56087 100%);
+}
+ion-item {
+  --background: transparent;
+}
+* {
+  user-select: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+ion-input {
+  font-weight: 600;
+  background-color: #F4F4F7;
+  padding: 4px 8px !important;
+  border-radius: 16px;
+}
+.lead {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 42px;
+  color: #fff;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.input-container p, .recovery, .forgot {
+  font-weight: 600;
+  line-height: 32px;
+  color: #fff;
+}
+.recovery {
+  text-decoration: underline;
+  cursor: pointer;
+}
