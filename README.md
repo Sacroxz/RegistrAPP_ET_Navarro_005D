@@ -1,5 +1,5 @@
 # RegistrAPP
-Aplicacion movil para el registro de asistencia por medio de QR.
+Aplicacion movil para el registro de asistencia por medio de la generacion y lectura de codigos QR.
 
 ## Requisitos
 Requisitos para instalar el proyecto:
