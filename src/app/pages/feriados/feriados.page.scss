@@ -19,6 +19,12 @@
     font-weight: 600;
     font-size: 14px;
   }
+  .menu-container {
+    display: flex;
+  }
+  .menu-icon {
+    cursor: pointer;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;

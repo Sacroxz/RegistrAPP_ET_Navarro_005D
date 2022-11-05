@@ -1,7 +1,7 @@
 <ion-content>
   <div class="container">
-    <div style="display: flex">
-      <ion-img style="cursor: pointer" routerLink="/inicio" routerDirection="back" src="/assets/svg/chevron-left-black.svg"></ion-img>
+    <div class="menu-container">
+      <ion-img class="menu-icon" routerLink="/inicio" routerDirection="back" src="/assets/svg/chevron-left-black.svg"></ion-img>
     </div>
     <div class="wrapper">
       <p class="lead">Feriados</p>
@@ -59,7 +59,7 @@
           </p>
         </div>
         </div>
-        <ion-button (click)="showLoading()" [disabled]="!formularioQR.valid" style="margin-top: 16px;" class="btn-primary">
+        <ion-button (click)="showLoading()" [disabled]="!formularioQR.valid" class="btn-primary">
           ✨ Generar
         </ion-button>
       </form>

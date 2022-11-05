@@ -4,6 +4,12 @@
 .container {
   height: 90%;
 }
+.menu-container {
+  display: flex;
+}
+.menu-icon {
+  cursor: pointer;
+}
 .wrapper {
   display: flex;
   flex-direction: column;

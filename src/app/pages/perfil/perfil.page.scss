@@ -6,6 +6,12 @@
   flex-direction: column;
   gap: 16px;
 }
+.menu-container {
+  display: flex;
+}
+.menu-icon {
+  cursor: pointer;
+}
 .lead {
   display: flex;
   height: 48px;

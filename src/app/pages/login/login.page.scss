@@ -32,6 +32,12 @@ ion-input.custom {
 ion-input.custom.pass {
   border-radius: 8px 0px 0px 8px;
 }
+.menu-container {
+  display: flex;
+}
+.menu-icon {
+  cursor: pointer;
+}
 .has-focus {
   outline: 2px solid #5b9bd1 !important;
 }
