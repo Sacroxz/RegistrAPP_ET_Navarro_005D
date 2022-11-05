@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GeneraqrPageRoutingModule } from './qr-create-routing.module';
+import { QrCreatePageRoutingModule } from './qr-create-routing.module';
 
 import { QrCreatePage } from './qr-create.page';
 
@@ -14,7 +14,7 @@ import { QrCreatePage } from './qr-create.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    GeneraqrPageRoutingModule
+    QrCreatePageRoutingModule
   ],
   declarations: [QrCreatePage]
 })
