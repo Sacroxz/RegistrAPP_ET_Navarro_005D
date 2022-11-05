@@ -14,89 +14,48 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module')
-    .then( m => m.HomePageModule), 
+    .then( m => m.HomePageModule),
     canActivate: [NoIngresadoGuard]
   },
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module')
-    .then( m => m.LoginPageModule), 
+    .then( m => m.LoginPageModule),
     canActivate: [NoIngresadoGuard]
   },
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module')
-    .then( m => m.RegisterPageModule), 
+    .then( m => m.RegisterPageModule),
     canActivate: [NoIngresadoGuard]
   },
   {
     path: 'scanner',
     loadChildren: () => import('./pages/scanner/scanner.module')
-    .then( m => m.ScannerPageModule), 
+    .then( m => m.ScannerPageModule),
     canActivate: [IngresadoGuard, EstudianteGuard]
-  },
-  {
-    path: 'horario',
-    loadChildren: () => import('./pages/horario/horario.module')
-    .then( m => m.HorarioPageModule), 
-    canActivate: [IngresadoGuard]
   },
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module')
-    .then( m => m.InicioPageModule), 
+    .then( m => m.InicioPageModule),
     canActivate: [IngresadoGuard]
   },
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module')
-    .then( m => m.PerfilPageModule), 
-    canActivate: [IngresadoGuard]
-  },
-  {
-    path: 'cursos',
-    loadChildren: () => import('./pages/cursos/cursos.module')
-    .then( m => m.CursosPageModule), 
-    canActivate: [IngresadoGuard]
-  },
-  {
-    path: 'descripcion-curso',
-    loadChildren: () => import('./pages/descripcion-curso/descripcion-curso.module')
-    .then( m => m.DescripcionCursoPageModule), 
-    canActivate: [IngresadoGuard]
-  },
-  {
-    path: 'asistencias',
-    loadChildren: () => import('./pages/asistencias/asistencias.module')
-    .then( m => m.AsistenciasPageModule), 
-    canActivate: [IngresadoGuard]
-  },
-  {
-    path: 'cambiar-contrasena',
-    loadChildren: () => import('./pages/cambiar-contrasena/cambiar-contrasena.module')
-    .then( m => m.CambiarContrasenaPageModule), 
+    .then( m => m.PerfilPageModule),
     canActivate: [IngresadoGuard]
   },
   {
     path: 'asistencia-registrada',
     loadChildren: () => import('./pages/asistencia-registrada/asistencia-registrada.module')
-    .then( m => m.AsistenciaRegistradaPageModule), 
-    canActivate: [IngresadoGuard]
-  },
-  {
-    path: 'recuperar-contrasena',
-    loadChildren: () => import('./pages/recuperar-contrasena/recuperar-contrasena.module')
-    .then( m => m.RecuperarContrasenaPageModule), 
+    .then( m => m.AsistenciaRegistradaPageModule),
     canActivate: [IngresadoGuard]
   },
   {
     path: 'generaqr',
     loadChildren: () => import('./pages/generaqr/generaqr.module').then( m => m.GeneraqrPageModule),
-    canActivate: [IngresadoGuard, ProfesorGuard]
-  },
-  {
-    path: 'qr-profesor',
-    loadChildren: () => import('./pages/qr-profesor/qr-profesor.module').then( m => m.QrProfesorPageModule),
     canActivate: [IngresadoGuard, ProfesorGuard]
   },
   {
