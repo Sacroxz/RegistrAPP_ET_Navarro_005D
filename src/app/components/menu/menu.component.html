@@ -1,11 +1,45 @@
-<ion-menu side="start" menuId="primerMenu" contentId="main" swipeGesture="false">
+<ion-menu side="start" menuId="primerMenu" contentId="main" swipeGesture="false" (ionOpen)="menuOpened()">
   <ion-header>
-    <ion-toolbar>
+    <!-- <ion-toolbar>
       <ion-title>RegistrAPP</ion-title>
-    </ion-toolbar>
+    </ion-toolbar> -->
   </ion-header>
   <ion-content>
-      <ion-list>
+    <div class="menu-container">
+      <div class="profile-container">
+        <img src="../../../assets/png/avatar-guest.png" alt="" class="profile__pic">
+        <div class="profile-data-container">
+          <p class="profile__name">{{ nombre | titlecase }}</p>
+          <p class="profile__type">{{ tipoUsuario }}</p>
+        </div>
+      </div>
+      <hr class="ruler" />
+      <ul class="page-list-container" *ngFor="let c of componentes | async">
+        <li>
+          <ion-menu-toggle>
+            <a [routerLink]="c.redirectTo" (click)="close()">
+              <div class="page-card-container" routerLinkActive="active-link">
+                <img [src]="c.icon" alt="">
+                <p class="page__name">{{c.name}}</p>
+              </div>
+            </a>
+          </ion-menu-toggle>
+        </li>
+      </ul>
+      <ul class="page-list-container">
+        <li>
+          <ion-menu-toggle>
+          <a routerLink="/home" (click)="logout()">
+            <div class="page-card-container">
+              <img src="../../../assets/icon/logoff.svg" alt="">
+              <p class="page__name">Salir</p>
+            </div>
+          </a>
+          </ion-menu-toggle>
+        </li>    
+    </ul>
+    </div>
+      <!-- <ion-list>
         <ion-menu-toggle *ngFor="let c of componentes | async">
           <ion-item [routerLink]="c.redirectTo" routerLinkActive="active-link">
             <ion-icon [name]="c.icon" slot="start" routerLinkActive="active-link"></ion-icon>
@@ -18,6 +52,6 @@
             <ion-label routerLinkActive="active-link">Cerrar Sesion</ion-label>
           </ion-item>
         </ion-menu-toggle>
-      </ion-list>
+      </ion-list> -->
   </ion-content>
 </ion-menu>

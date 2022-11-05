@@ -1,16 +1,16 @@
 [
   {
-    "icon": "home-outline",
+    "icon": "../../../assets/icon/home.svg",
     "name": "Inicio",
     "redirectTo": "/inicio"
   },
   {
-    "icon": "calendar-outline",
+    "icon": "../../../assets/icon/calendar.svg",
     "name": "Feriados",
     "redirectTo": "/feriados"
   },
   {
-    "icon": "person-outline",
+    "icon": "../../../assets/icon/profile.svg",
     "name": "Perfil",
     "redirectTo": "/perfil"
   }
