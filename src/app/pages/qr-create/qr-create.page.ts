@@ -4,11 +4,11 @@ import { LoadingController } from '@ionic/angular';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-generaqr',
-  templateUrl: './generaqr.page.html',
-  styleUrls: ['./generaqr.page.scss'],
+  selector: 'app-qr-create',
+  templateUrl: './qr-create.page.html',
+  styleUrls: ['./qr-create.page.scss'],
 })
-export class GeneraqrPage implements OnInit {
+export class QrCreatePage implements OnInit {
   formularioQR: FormGroup;
 
   constructor(private loadingCtrl: LoadingController, private router: Router, private fb: FormBuilder) {

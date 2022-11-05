@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GeneraqrPageRoutingModule } from './generaqr-routing.module';
+import { GeneraqrPageRoutingModule } from './qr-create-routing.module';
 
-import { GeneraqrPage } from './generaqr.page';
+import { QrCreatePage } from './qr-create.page';
 
 @NgModule({
   imports: [
@@ -16,6 +16,6 @@ import { GeneraqrPage } from './generaqr.page';
     ReactiveFormsModule,
     GeneraqrPageRoutingModule
   ],
-  declarations: [GeneraqrPage]
+  declarations: [QrCreatePage]
 })
-export class GeneraqrPageModule {}
+export class QrCreatePageModule {}
