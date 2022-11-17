@@ -54,16 +54,6 @@ const routes: Routes = [
     canActivate: [IngresadoGuard]
   },
   {
-    path: 'generaqr',
-    loadChildren: () => import('./pages/generaqr/generaqr.module').then( m => m.GeneraqrPageModule),
-    canActivate: [IngresadoGuard, ProfesorGuard]
-  },
-  {
-    path: 'qrcode',
-    loadChildren: () => import('./pages/qrcode/qrcode.module').then( m => m.QrcodePageModule),
-    canActivate: [IngresadoGuard, ProfesorGuard]
-  },
-  {
     path: 'feriados',
     loadChildren: () => import('./pages/feriados/feriados.module').then( m => m.FeriadosPageModule),
     canActivate: [IngresadoGuard]
