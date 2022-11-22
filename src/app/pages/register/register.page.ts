@@ -14,7 +14,7 @@ export class RegisterPage implements OnInit {
   formularioRegistro: FormGroup;
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
   newUsuario: Usuario = <Usuario>{};
-  mail: boolean;
+  mail: boolean | undefined;
 
   constructor(private registroService: RegistroService,
               private alertController: AlertController,
@@ -92,18 +92,20 @@ export class RegisterPage implements OnInit {
   
   async validarCorreo(form) {
     await this.registroService.getUsuarios().then(usuarios => {
-      for (let usuario of usuarios) {
-        if (form.correo === usuario.correoUsuario) {
-          this.mail = true;
-          return;
-        } else {
-          this.mail = false;
+      if (usuarios) {
+        for (let usuario of usuarios) {
+          if (form.correo === usuario.correoUsuario) {
+            this.mail = true;
+            return;
+          } else {
+            this.mail = false;
+          }
         }
       }
     })
   }
   
-  async showToast(msg) {
+  async showToast(msg: string) {
     const toast = await this.toastController.create({
       message: msg,
       duration: 2000
