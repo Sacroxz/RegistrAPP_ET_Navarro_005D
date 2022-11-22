@@ -10,10 +10,10 @@ import { ClimaService } from 'src/app/services/clima.service';
 })
 export class InicioPage implements OnInit {
   today: number;
-  usuarios: Usuario[];
-  nombre: string;
-  tipoUsuario: string;
-  temp: number;
+  usuarios: Usuario[] | undefined;
+  nombre: string | undefined;
+  tipoUsuario: string | undefined;
+  temp: number | undefined;
 
   constructor(private menuCtrl: MenuController, private climaService: ClimaService) {
     this.today = Date.now();

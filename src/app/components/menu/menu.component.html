@@ -17,7 +17,7 @@
       <ul class="page-list-container" *ngFor="let c of componentes | async">
         <li>
           <ion-menu-toggle>
-            <a [routerLink]="c.redirectTo" (click)="close()">
+            <a [routerLink]="c.redirectTo">
               <div class="page-card-container" routerLinkActive="active-link">
                 <img [src]="c.icon" alt="">
                 <p class="page__name">{{c.name}}</p>

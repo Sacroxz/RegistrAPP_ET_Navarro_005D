@@ -8,6 +8,7 @@ import { RegisterPageRoutingModule } from './register-routing.module';
 
 import { RegisterPage } from './register.page';
 import { ShowHidePasswordComponent } from 'src/app/components/show-hide-password/show-hide-password.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ShowHidePasswordComponent } from 'src/app/components/show-hide-password
     ReactiveFormsModule,
     IonicModule,
     RegisterPageRoutingModule,
+    ComponentsModule
   ],
-  declarations: [RegisterPage, ShowHidePasswordComponent]
+  declarations: [RegisterPage]
 })
 export class RegisterPageModule {}
