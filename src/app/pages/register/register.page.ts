@@ -3,6 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { RegistroService, Usuario } from 'src/app/services/registro.service';
 import { ToastController, NavController, LoadingController } from '@ionic/angular';
 import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
+import { GlobaluserService } from 'src/app/services/globaluser.service';
 
 @Component({
   selector: 'app-register',
@@ -21,9 +22,9 @@ export class RegisterPage implements OnInit {
               private toastController: ToastController,
               private fb: FormBuilder,
               private loadingCtrl: LoadingController,
-              private navCtrl: NavController) {
+              private navCtrl: NavController,
+              private globalUser: GlobaluserService) {
               this.formularioRegistro = this.fb.group({
-                
                 nombre: new FormControl('', Validators.compose([
                   Validators.required,
                   Validators.minLength(3),
@@ -83,13 +84,14 @@ export class RegisterPage implements OnInit {
     localStorage.setItem('tipoUsuario', this.newUsuario.tipoUsuario);
     localStorage.setItem('nomUsuario', this.newUsuario.nomUsuario);
     localStorage.setItem('correoUsuario', this.newUsuario.correoUsuario);
+    this.globalUser.publishUser(this.newUsuario);
 
     this.newUsuario = <Usuario>{};
     this.navCtrl.navigateRoot('/inicio', {animated: true});
   });
-  
+
   }
-  
+
   async validarCorreo(form) {
     await this.registroService.getUsuarios().then(usuarios => {
       if (usuarios) {
@@ -102,9 +104,9 @@ export class RegisterPage implements OnInit {
           }
         }
       }
-    })
+    });
   }
-  
+
   async showToast(msg: string) {
     const toast = await this.toastController.create({
       message: msg,

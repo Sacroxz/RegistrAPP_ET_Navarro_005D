@@ -14,3 +14,10 @@ export interface Asignatura {
   asistencias: number;
   inasistencias: number;
 }
+
+export interface Usuario {
+  nomUsuario: string;
+  correoUsuario: string;
+  passUsuario: string;
+  tipoUsuario: string;
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { RegistroService, Usuario } from 'src/app/services/registro.service';
+import { GlobaluserService } from 'src/app/services/globaluser.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -18,7 +19,8 @@ export class LoginPage {
               private navController: NavController,
               private registroService: RegistroService,
               private fb: FormBuilder,
-              private loadingCtrl: LoadingController) {
+              private loadingCtrl: LoadingController,
+              private globalUser: GlobaluserService) {
                 this.formularioLogin = this.fb.group({
                   correo: new FormControl('', Validators.compose([
                     Validators.required,
@@ -30,7 +32,7 @@ export class LoginPage {
                   ]))
                 });
               }
-  
+
   async ingresar(){
     const f = this.formularioLogin.value;
     let a = 0;
@@ -47,6 +49,7 @@ export class LoginPage {
           localStorage.setItem('tipoUsuario', obj.tipoUsuario);
           localStorage.setItem('nomUsuario', obj.nomUsuario);
           localStorage.setItem('correoUsuario', obj.correoUsuario);
+          this.globalUser.publishUser(obj);
           this.navController.navigateForward('/inicio');
         }
       }
