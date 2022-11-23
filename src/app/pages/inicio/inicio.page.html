@@ -7,31 +7,33 @@
       <div class="top">
         <p class="lead">Hola, {{ nombre }} 👋</p>
       </div>
-      <div class="info_card">
-        <div>
-          <div class="flex">
-          <p class="today">{{ today | date: 'd MMM, y' }}</p>
-          <p class="temp">{{ temp }} °C</p>
+      <div class="scan-wrapper">
+        <div class="info_card">
+          <div>
+            <div class="flex">
+            <p class="today">{{ today | date: 'd MMM, y' }}</p>
+            <p class="temp">{{ temp }} °C</p>
+            </div>
+            <p class="classes_left" *ngIf="tipoUsuario === 'Estudiante'">📅 0 Clases Asistidas</p>
+            <p class="classes_left" *ngIf="tipoUsuario === 'Profesor'">📅 0 Clases Registradas</p>
           </div>
-          <p class="classes_left" *ngIf="tipoUsuario === 'Estudiante'">📅 0 Clases Asistidas</p>
-          <p class="classes_left" *ngIf="tipoUsuario === 'Profesor'">📅 0 Clases Registradas</p>
         </div>
-      </div>
-      <div class="scan" *ngIf="tipoUsuario === 'Estudiante'">
-        <ion-img src="assets/svg/notes.svg" class="notes"></ion-img>
-        <p class="strong">Asistencia QR</p>
-        <p class="support">Escanea el codigo generado por tu profesor para registrar tu asistencia</p>
-        <ion-button routerLink="/scanner" routerDirection="forward" class="btn-primary">
-          🔎 Escanear
-        </ion-button>
-      </div>
-      <div class="scan" *ngIf="tipoUsuario === 'Profesor'">
-        <ion-img src="assets/svg/notes.svg" class="notes"></ion-img>
-        <p class="strong">Asistencia QR</p>
-        <p class="support">Genera un codigo para registrar la asistencia de tu curso</p>
-        <ion-button routerLink="/generaqr" routerDirection="forward" class="btn-primary">
-          ✨ Generar
-        </ion-button>
+        <div class="scan" *ngIf="tipoUsuario === 'Estudiante'">
+          <!-- <ion-img src="assets/svg/notes.svg" class="notes"></ion-img>
+          <p class="strong">Asistencia QR</p>
+          <p class="support">Escanea el codigo generado por tu profesor para registrar tu asistencia</p> -->
+          <ion-button routerLink="/scanner" routerDirection="forward" class="btn-primary">
+            🔎 Escanear
+          </ion-button>
+        </div>
+        <div class="scan" *ngIf="tipoUsuario === 'Profesor'">
+          <!-- <ion-img src="assets/svg/notes.svg" class="notes"></ion-img>
+          <p class="strong">Asistencia QR</p>
+          <p class="support">Genera un codigo para registrar la asistencia de tu curso</p> -->
+          <ion-button routerLink="/generaqr" routerDirection="forward" class="btn-primary">
+            ✨ Generar
+          </ion-button>
+        </div>
       </div>
     </div>
   </div>

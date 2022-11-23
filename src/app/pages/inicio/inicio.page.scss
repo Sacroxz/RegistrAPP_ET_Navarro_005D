@@ -15,7 +15,21 @@ ion-row {
 }
 ion-button {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+}
+.scan-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .menu-container {
   display: flex;
@@ -36,7 +50,7 @@ ion-button {
   height: 48px;
 }
 .lead {
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 32px;
   font-weight: 700;
   text-transform: capitalize;
@@ -68,7 +82,7 @@ p.lead {
 }
 .today, .temp {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 32px;
   color: #92949C;
 }
@@ -78,8 +92,8 @@ p.lead {
 .classes_left {
 
   font-weight: 700;
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 1.1rem;
+  line-height: 2rem;
 }
 .sublead {
   font-weight: 700;

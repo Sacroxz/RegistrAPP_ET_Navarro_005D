@@ -1,33 +1,21 @@
 <ion-content>
   <div class="container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-text class="ion-text-center" color="light">
-            <h1><span style="font-size: 18px; font-family: 'Plus Jakarta Sans'">Bienvenido a </span><br>RegistrAPP</h1>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-img src="/assets/svg/conference.svg" style="height: 270px"></ion-img>
-      <ion-row>
-        <ion-col>
-          <ion-text class="ion-text-center" color="light">
-            <p style="font-family: 'Plus Jakarta Sans'; font-weight: 600; line-height: 24px;">Seleccione una opcion para continuar</p>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button routerLink="/register" expand="block" color="secondary">
-            Crear Cuenta
-          </ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button routerLink="/login" expand="block" fill="outline" color="light">
-            Iniciar Sesion
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div class="title-wrapper">
+    <ion-text class="ion-text-center" color="light">
+      <h1 class="welcome">Bienvenido a RegistrAPP</h1>
+    </ion-text>
+    <ion-img src="/assets/svg/conference.svg" style="height: 270px"></ion-img>
+    </div>
+    <div class="action-wrapper">
+      <p class="helper-text" style="font-family: 'Plus Jakarta Sans'; font-weight: 600; line-height: 24px">Seleccione una opcion para continuar</p>
+      <div class="button-wrapper">
+        <ion-button id="register" routerLink="/register" expand="block" color="secondary">
+          Crear Cuenta
+        </ion-button>
+        <ion-button id="login" routerLink="/login" expand="block" fill="outline" color="light">
+          Iniciar Sesion
+        </ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>
