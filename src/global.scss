@@ -30,6 +30,11 @@
   font-family: 'Plus Jakarta Sans';
 }
 
+body.scanner-active {
+  --background: transparent;
+  --ion-background-color: transparent;
+}
+
 ion-button {
   text-transform: capitalize;
   font-weight: 700;
@@ -37,8 +42,8 @@ ion-button {
   letter-spacing: 0;
   --border-radius: 16px;
   border-radius: 16px;
-  --padding-top: 24px;
-  --padding-bottom: 24px;
+  --padding-top: 28px;
+  --padding-bottom: 28px;
   --padding-left: 12px;
   --padding-right: 12px;
   --box-shadow: none !important;
@@ -73,3 +78,4 @@ ion-loading.custom-loading {
   font-size: 14px;
   font-weight: 700;
 }
+

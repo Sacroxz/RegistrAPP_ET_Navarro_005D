@@ -1,13 +1,13 @@
 <ion-content>
   <div class="container">
     <div class="menu-container">
-      <ion-img class="menu-icon" routerLink="/inicio" routerDirection="back" src="/assets/svg/chevron-left-black.svg"></ion-img>
+      <ion-img class="menu-icon" (click)="back()" src="/assets/svg/chevron-left-black.svg"></ion-img>
     </div>
     <div class="wrapper">
-      <p class="lead">🔎 Lector QR</p>
-      <div class="scanner-container" (click)="showLoading()">
+      <!-- <p class="lead">🔎 Lector QR</p> -->
+      <!-- <div class="scanner-container" (click)="startScan()">
         <p class="scanner-text">Debes permitir el acceso a la camara para visualizar el scanner.</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </ion-content>
