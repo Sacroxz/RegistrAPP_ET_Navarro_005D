@@ -13,6 +13,7 @@
         <!-- Input Nombre -->
         <p class="label">Nombre</p>
         <ion-input 
+          id="name-input"
           type="text" 
           formControlName="nombre" 
           placeholder="Ingrese su nombre"
@@ -44,7 +45,8 @@
           type="email" 
           formControlName="correo" 
           placeholder="Ingrese el correo"
-          class="custom">
+          class="custom"
+          id="email-input">
         </ion-input>
         <div *ngIf="formularioRegistro.get('correo').invalid && 
         formularioRegistro.get('correo').errors && 
@@ -65,7 +67,8 @@
           type="password" 
           formControlName="password" 
           placeholder="Ingrese la contrasena"
-          class="custom pass">
+          class="custom pass"
+          id="password-input">
         </ion-input>
         </app-show-hide-password>
         <div *ngIf="formularioRegistro.get('password').invalid && 
@@ -83,7 +86,7 @@
         <div class="input-container">
           <p class="label">Tipo de Cuenta</p>
           <ion-list>
-            <ion-radio-group value="student" formControlName="tipo"> 
+            <ion-radio-group value="student" formControlName="tipo" id="account-type-input"> 
               <ion-item>
                 <ion-label class="type-label">Estudiante</ion-label>
                 <ion-radio slot="start" value="Estudiante" color="secondary"></ion-radio>
@@ -95,7 +98,7 @@
             </ion-radio-group>
           </ion-list>
         </div>
-        <ion-button (click)="presentLoading()" color="secondary" expand="block" fill="solid" shape="round">
+        <ion-button (click)="presentLoading()" id="register-button" color="secondary" expand="block" fill="solid" shape="round">
           Crear Cuenta
         </ion-button>
       </form>

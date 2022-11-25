@@ -38,8 +38,8 @@ export class LoginPage {
     let a = 0;
     this.registroService.getUsuarios().then(datos => {
       this.usuarios = datos;
-      if (datos.length === 0) {
-        return null;
+      if (!datos) {
+        this.alertMsg();
       }
       console.log(this.usuarios);
       for (const obj of this.usuarios) {

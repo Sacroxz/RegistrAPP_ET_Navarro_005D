@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-describe('Home Page', () => {
+describe('Home Page UI elements', () => {
 
   beforeEach(async () => {
     await browser.get('/');

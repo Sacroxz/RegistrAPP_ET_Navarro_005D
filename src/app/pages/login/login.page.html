@@ -14,7 +14,8 @@
           type="email" 
           formControlName="correo" 
           placeholder="Ingrese el correo"
-          class="custom">
+          class="custom"
+          id="password-input">
         </ion-input>
         <!-- <div *ngIf="formularioLogin.get('correo').invalid && 
         formularioLogin.get('correo').errors && 
@@ -35,7 +36,8 @@
           type="password" 
           formControlName="password" 
           placeholder="Ingrese la contrasena"
-          class="custom pass">
+          class="custom pass"
+          id="password-input">
         </ion-input>
         </app-show-hide-password>
         
@@ -54,7 +56,7 @@
         <!-- <div>
           <p class="forgot">Olvidaste tu contrasena? <br> <span class="recovery" routerLink="/recuperar-contrasena"> Recuperala aqui!</span></p>
         </div> -->
-        <ion-button (click)="presentLoading()" class="m-top" color="secondary" expand="block" fill="solid" shape="round">
+        <ion-button id="login-button" (click)="presentLoading()" class="m-top" color="secondary" expand="block" fill="solid" shape="round">
           Iniciar Sesion
         </ion-button>
       </form>

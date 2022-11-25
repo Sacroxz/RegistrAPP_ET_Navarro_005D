@@ -58,6 +58,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/feriados/feriados.module').then( m => m.FeriadosPageModule),
     canActivate: [IngresadoGuard]
   },
+  {
+    path: 'qr-create',
+    loadChildren: () => import('./pages/qr-create/qr-create.module').then( m => m.QrCreatePageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'qr-created',
+    loadChildren: () => import('./pages/qr-created/qr-created.module').then( m => m.QrCreatedPageModule),
+    canActivate: [IngresadoGuard]
+  },
 
 ];
 
