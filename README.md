@@ -21,7 +21,7 @@ npm install @capacitor-community/barcode-scanner
 ```
 3. Clonar el proyecto de GitHub.
 ```
-git clone https://github.com/Sacroxz/RegistrAPP_Exp2_Navarro_005D.git
+git clone https://github.com/Sacroxz/RegistrAPP_Exp3_Navarro_005D.git
 ```
 4. Reemplazar el src del proyecto clonado con el src del proyecto que creamos.
 5. Correr la aplicacion.
