@@ -18,6 +18,8 @@ cd registrapp
 npm install --save @ionic/storage
 npm install --save @ionic/storage-angular
 npm install @capacitor-community/barcode-scanner
+npm install angularx-qrcode@14.0.0 --save
+npm install json-server
 ```
 3. Clonar el proyecto de GitHub.
 ```

@@ -67,7 +67,11 @@ const routes: Routes = [
     path: 'qr-created',
     loadChildren: () => import('./pages/qr-created/qr-created.module').then( m => m.QrCreatedPageModule),
     canActivate: [IngresadoGuard]
+  },  {
+    path: 'ver-asistencias',
+    loadChildren: () => import('./pages/ver-asistencias/ver-asistencias.module').then( m => m.VerAsistenciasPageModule)
   },
+
 
 ];
 

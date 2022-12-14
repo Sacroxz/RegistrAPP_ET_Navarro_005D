@@ -8,11 +8,14 @@ import { QrCreatedPageRoutingModule } from './qr-created-routing.module';
 
 import { QrCreatedPage } from './qr-created.page';
 
+import { QRCodeModule } from 'angularx-qrcode';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    QRCodeModule,
     QrCreatedPageRoutingModule
   ],
   declarations: [QrCreatedPage]

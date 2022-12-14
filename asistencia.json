@@ -1,0 +1,34 @@
+{
+  "asistencias": [
+    {
+      "id": 1,
+      "modulo": "PGY4131",
+      "seccion": "006D",
+      "fecha": "20/10/2022",
+      "nombre_profesor": "Mauricio",
+      "correo_profesor": "mauricio@mail.com",
+      "alumnos": [
+        {
+          "nombre": "Carlos",
+          "correo": "carlos@mail.com",
+          "asistencia": "Presente"
+        }
+      ]
+    },
+    {
+      "modulo": "PGY4121",
+      "seccion": "006D",
+      "fecha": "14/12/2022",
+      "nombre_profesor": "Mauricio",
+      "correo_profesor": "mauricio@mail.com",
+      "alumnos": [
+        {
+          "nombre": "Carlos",
+          "correo": "carlos@mail.com",
+          "asistencia": "Presente"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<ion-content>
+  <div class="container">
+    <div class="menu-container">
+      <ion-img class="menu-icon" (click)="back()" src="/assets/svg/chevron-left-black.svg"></ion-img>
+    </div>
+    <div class="wrapper">
+      <div class="top">
+        <p class="lead">Tus Asistencias</p>
+      </div>
+      <div class="scan-wrapper">
+        <!-- <ion-list *ngIf="tipoUsuario === 'Profesor'">
+          <ion-item>
+            <ion-label>SECCION</ion-label>
+            <ion-label>MODULO</ion-label>
+            <ion-label>FECHA</ion-label>
+            <ion-label>
+              ALUMNOS
+            </ion-label>
+          </ion-item>
+          <ion-item *ngFor="let a of asistenciasJSON">
+            <ion-label>{{a.seccion}}</ion-label>
+            <ion-label>{{a.modulo}}</ion-label>
+            <ion-label>{{a.fecha}}</ion-label>
+            <ion-label>
+
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list *ngIf="tipoUsuario === 'Estudiante'">
+          <ion-item style="display: flex; width: 100%">
+            <ion-label style="flex-grow: 1">SECCION</ion-label>
+            <ion-label style="flex-grow: 1">MODULO</ion-label>
+            <ion-label style="flex-grow: 1">FECHA</ion-label>
+            <ion-label style="flex-grow: 1" *ngIf="tipoUsuario === 'Profesor'">
+              ALUMNOS
+            </ion-label>
+          </ion-item>
+          <ion-item *ngFor="let a of asistenciasJSON">
+            <div *ngFor="let b of a.alumnos" style="display: flex; width: 100%">
+              <div *ngIf="b.correo === correo" style="display: flex; width: 100%">
+                <ion-label style="flex-grow: 1">{{a.seccion}}</ion-label>
+                <ion-label style="flex-grow: 1">{{a.modulo}}</ion-label>
+                <ion-label style="flex-grow: 1">{{a.fecha}}</ion-label>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list> -->
+        <div class="card_container">
+          <div class="info_card" style="margin-bottom: 16px" *ngFor="let a of asistenciasJSON">
+            <div *ngIf="tipoUsuario === 'Profesor'">
+              <div class="flex">
+              <p class="today">{{a.fecha}}</p>
+              <p class="temp">{{a.modulo}}</p>
+              </div>
+              <p class="classes_left"> 
+                {{a.modulo}}-{{a.seccion}}</p>
+                <ion-button id="open-modal_{{a.modulo}}-{{a.seccion}}-{{a.fecha}}" expand="block">🔎 Ver Asistentes</ion-button>
+                <ion-modal #modal trigger="open-modal_{{a.modulo}}-{{a.seccion}}-{{a.fecha}}" [presentingElement]="presentingElement">
+                    <ng-template>
+                      <ion-header>
+                        <ion-toolbar>
+                          <ion-title>Alumnos</ion-title>
+                          <ion-buttons slot="end">
+                            <ion-button (click)="modal.dismiss()">Close</ion-button>
+                          </ion-buttons>
+                        </ion-toolbar>
+                      </ion-header>
+                      <ion-content>
+                        <ion-list>
+                          <ion-item *ngFor="let b of a.alumnos">
+                            <ion-label>
+                              <h2 style="font-weight: 500; font-size: 20px; margin-bottom: 4px">{{b.nombre}}</h2>
+                              <p style="font-weight: 500; font-size: 16px">{{b.correo}}</p>
+                            </ion-label>
+                          </ion-item>
+                        </ion-list>
+                      </ion-content>
+                    </ng-template>
+                </ion-modal>
+            </div>
+            <div *ngIf="tipoUsuario === 'Estudiante'">
+              <span *ngFor="let b of a.alumnos">
+                <div *ngIf="b.correo === correo">
+                  <div class="flex">
+                  <p class="today">{{a.fecha}}</p>
+                  <p class="temp">{{a.modulo}}</p>
+                  </div>
+                  <p class="classes_left">
+                    {{a.modulo}}-{{a.seccion}}</p>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

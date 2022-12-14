@@ -1,7 +1,8 @@
 <ion-content>
   <div class="container">
     <div class="wrapper">
-      <ion-img src="../assets/svg/qr-code-3.svg" alt="qr code"></ion-img>
+      <!-- <ion-img src="../assets/svg/qr-code-3.svg" alt="qr code"></ion-img> -->
+      <qrcode [qrdata]="pageName" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
       <div class="success-container">
         <p class="title">Codigo QR</p>
         <p class="description">Escanee este codigo para registrar su asistencia.</p>

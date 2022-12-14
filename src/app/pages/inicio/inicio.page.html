@@ -8,7 +8,7 @@
         <p class="lead">Hola, {{ nombre }} 👋</p>
       </div>
       <div class="scan-wrapper">
-        <div class="info_card">
+        <div class="info_card" routerLink="/ver-asistencias" style="cursor: pointer">
           <div>
             <div class="flex">
             <p class="today">{{ today | date: 'd MMM, y' }}</p>
@@ -25,14 +25,20 @@
           <ion-button id="scan-button" routerLink="/scanner" routerDirection="forward" class="btn-primary">
             🔎 Escanear
           </ion-button>
+          <!-- <ion-button id="scan-button" routerLink="/ver-asistencias" routerDirection="forward" class="btn-primary">
+            🔎 Ver Asistencias
+          </ion-button> -->
         </div>
         <div class="scan" *ngIf="tipoUsuario === 'Profesor'">
-          <!-- <ion-img src="assets/svg/notes.svg" class="notes"></ion-img>
-          <p class="strong">Asistencia QR</p>
-          <p class="support">Genera un codigo para registrar la asistencia de tu curso</p> -->
-          <ion-button routerLink="/generaqr" routerDirection="forward" class="btn-primary">
+          <ion-button routerLink="/qr-create" routerDirection="forward" class="btn-primary">
             ✨ Generar
           </ion-button>
+          <!-- <ion-button routerLink="/qr-created" routerDirection="forward" class="btn-primary">
+            🔎 Codigo Generado
+          </ion-button>
+          <ion-button id="scan-button" routerLink="/ver-asistencias" routerDirection="forward" class="btn-primary">
+            🔎 Ver Asistencias
+          </ion-button> -->
         </div>
       </div>
     </div>

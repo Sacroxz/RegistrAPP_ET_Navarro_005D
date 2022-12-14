@@ -21,3 +21,18 @@ export interface Usuario {
   passUsuario: string;
   tipoUsuario: string;
 }
+
+export interface IAsistencia {
+  modulo: string;
+  seccion: string;
+  fecha: string;
+  nombre_profesor: string;
+  correo_profesor: string;
+  alumnos: IAsistenciaAlumno[];
+}
+
+export interface IAsistenciaAlumno {
+  nombre: string;
+  correo: string;
+  asistencia: string;
+}

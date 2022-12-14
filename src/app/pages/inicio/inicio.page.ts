@@ -19,8 +19,9 @@ export class InicioPage implements OnInit {
     this.today = Date.now();
 
     this.climaService.getCurrentWeather().subscribe(resp => {
+      // eslint-disable-next-line @typescript-eslint/dot-notation
       this.temp = Math.round(resp['main']['temp']);
-    })
+    });
   }
 
   ngOnInit() {}

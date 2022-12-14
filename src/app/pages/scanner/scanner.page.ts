@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LoadingController, MenuController, NavController } from '@ionic/angular';
-import { Componente } from 'src/app/interfaces/interfaces';
+import { Componente, IAsistencia } from 'src/app/interfaces/interfaces';
 import { Router } from '@angular/router';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+import { AsistenciasService } from 'src/app/services/asistencias.service';
 @Component({
   selector: 'app-scanner',
   templateUrl: './scanner.page.html',
@@ -11,9 +12,13 @@ import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 export class ScannerPage implements OnInit, OnDestroy {
 
   componentes: Componente[] = [];
+  asistenciasJSON: IAsistencia[] = [];
+  nombreUsuario = localStorage.getItem('nomUsuario');
+  correoUsuario = localStorage.getItem('correoUsuario');
 
   constructor(private menuCtrl: MenuController,
-    private loadingCtrl: LoadingController, private router: Router, private navCtrl: NavController) {
+    private loadingCtrl: LoadingController, private router: Router, private navCtrl: NavController,
+    private asistenciasService: AsistenciasService) {
       this.startScan();
   }
 
@@ -32,15 +37,45 @@ export class ScannerPage implements OnInit, OnDestroy {
     this.menuCtrl.toggle();
   }
 
-  async showLoading() {
+  async showLoading(result) {
     const loading = await this.loadingCtrl.create({
       message: 'Registrando tu asistencia...',
-      duration: 2000,
     });
+    this.stopScan();
+    this.asistenciasService.listarAsistencias().subscribe(
+      (data) => {
+        const listString = JSON.stringify(data);
+        this.asistenciasJSON = JSON.parse(listString);
+        loading.dismiss();
+        const content = JSON.parse(result.content);
+        // eslint-disable-next-line @typescript-eslint/dot-notation
+        console.log('Content: ', content);
+        console.log('Content modulo: ', content[0].modulo);
+        this.asistenciasJSON.map((a)=> {
+          if (a.modulo === content[0].modulo && a.seccion === content[0].seccion && a.fecha === content[0].fecha) {
+            //TODO: AGREGAR ALUMNO
 
-    loading.onDidDismiss().then(() => this.router.navigate(['/asistencia-registrada']));
-
+            a.alumnos.push({nombre: this.nombreUsuario, correo: this.correoUsuario, asistencia: 'Presente'});
+            console.log('Updated asistencia: ', JSON.stringify(a));
+            this.asistenciasService.updateAsistencia(a, content[0].id).subscribe(
+              (dat) => {
+                console.log('Asistencia registrada');
+              }
+            );
+          }
+        });
+      },
+      (error) => {
+        console.log(error);
+        loading.dismiss();
+      }
+    );
+    loading.onDidDismiss().then(() => this.pushToNextScreenWithParams('/asistencia-registrada', result.content));
     loading.present();
+  }
+
+  pushToNextScreenWithParams(pageUrl: string, params: any) {
+    this.navCtrl.navigateForward(pageUrl, {state: params});
   }
 
   startScan = async () => {
@@ -53,7 +88,7 @@ export class ScannerPage implements OnInit, OnDestroy {
         return;
       } else {
         console.log(result);
-        this.showLoading();
+        this.showLoading(result);
         document.querySelector('body').classList.remove('scanner-active');
       }
   };

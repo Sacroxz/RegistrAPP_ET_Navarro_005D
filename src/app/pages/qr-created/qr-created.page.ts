@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IAsistencia } from 'src/app/interfaces/interfaces';
 
 @Component({
   selector: 'app-qr-created',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrCreatedPage implements OnInit {
 
-  constructor() { }
+  pageName: string;
+
+  constructor(public router: Router) {
+    if (router.getCurrentNavigation().extras.state) {
+      this.pageName = JSON.stringify(this.router.getCurrentNavigation().extras.state);
+      console.log(this.pageName);
+    }
+  }
 
   ngOnInit() {
   }
